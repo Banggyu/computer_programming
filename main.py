@@ -1,6 +1,8 @@
-dot = int(input("몇 단까지 출력할까요?"))
+number = [(1,2,3), (4,5,6), (7,8,9)]
+result = []
 
-for i in range(1,dot+1):
-    print("-----[",i,"단]-----")
-    for j in range(1, i+20-i):
-        print(i,"*",j,"=",i * j)
+for row in number:
+    for element in row:
+        if element % 2 == 0:
+            result.append(element)
+            print(element)
