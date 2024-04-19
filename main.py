@@ -5,4 +5,4 @@ for row in number:
     for element in row:
         if element % 2 == 0:
             result.append(element)
-            print(element)
+print(result)
