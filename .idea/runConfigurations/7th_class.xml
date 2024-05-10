@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="3th class" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false">
+  <configuration default="false" name="7th class" type="PythonConfigurationType" factoryName="Python" activateToolWindowBeforeRun="false">
     <module name="computer_programming" />
     <option name="ENV_FILES" value="" />
     <option name="INTERPRETER_OPTIONS" value="" />
@@ -8,7 +8,7 @@
       <env name="PYTHONUNBUFFERED" value="1" />
     </envs>
     <option name="SDK_HOME" value="" />
-    <option name="SDK_NAME" value="Python 3.12 (pythonProject)" />
+    <option name="SDK_NAME" value="Python 3.10 (pythonProject)" />
     <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     <option name="IS_MODULE_SDK" value="false" />
     <option name="ADD_CONTENT_ROOTS" value="false" />
