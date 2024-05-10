@@ -1,6 +1,13 @@
-dot = int(input("몇 단까지 출력할까요?"))
+import random
 
-for i in range(1,dot+1):
-    print("-----[",i,"단]-----")
-    for j in range(1, i+20-i):
-        print(i,"*",j,"=",i * j)
+def lotto():
+    results=[]
+    while len(results) < 6:
+        ran_num = random.randint(1, 45)
+        if ran_num in results:
+            print("결과가 이미 결과 목록에 있어 추가하지 않습니다")
+        else:
+            results.append(ran_num)
+    return results
+
+print(lotto())
