@@ -1,27 +1,21 @@
-def calculate_material_cost(area_py, material_type):
-    material_costs = {'벽지' : 100000, '바닥재': 70000, '페인트': 30000}
+def registration_number(identity_number):
+    if len(identity_number) != 14:
+        return False
 
-    if material_type not in material_costs:
-        raise ValueError("올바른 재료 타입(벽지, 바닥재, 페인트)을 입력 하십시오")
+    if identity_number[6] != '-':
+        return False
 
-    cost_per_py = material_costs[material_type]
+    identity_number = identity_number.replace('-', '')
 
-    total_cost = area_py * cost_per_py
+    weights = [2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5]
+    total = sum(int(identity_number[i]) * weights[i] for i in range(12))
+    remainder = (11 - total % 11) % 10
 
-    return total_cost
+    return remainder == int(identity_number[12])
 
-def main():
-    try:
-        area_py = float(input("방의 평수를 입력하시오: "))
-        material_type = input("재료 타입을 입력하시오: ")
 
-        total_cost = calculate_material_cost(area_py, material_type)
-
-        print(f"방의 평수: {area_py}평")
-        print(f"{material_type}의 재료 비용: {total_cost:,}원")
-
-    except ValueError as error:
-        print(error)
-
-if __name__ == "__main__":
-    main()
+id_card_number = input("주민등록번호를 입력하십시오: ")
+if registration_number(id_card_number):
+    print("주민등록번호가 일치합니다.")
+else:
+    print("주민등록번호가 일치하지 않습니다.")
