@@ -1,17 +1,22 @@
-class Bun:
-    def __init__(self, custard_cream, price):
-        self.content = custard_cream
-        self.price = 1000
+class Beverage:
+
+    def __init__(self, name, quantity):
+        self.menu = {"커피": 3000, "녹차": 2500, "아이스티": 3000}
+        self.name = name
+        self.quantity = quantity
         self.total = 0
 
+    def calculate(self):
+        if self.name == "커피" or self.name == "녹차" or self.name == "아이스티":
+            self.total += self.menu[self.name]*int(self.quantity)
+            print(self.menu)
+        else:
+            print("메뉴를 잘못 입력하셨습니다.")
 
-    def sell(self):
-        self.total += self.price
-        print(self.content + "붕어빵이 판매되었습니다")
 
-custard_cream_bun = Bun("슈크림", 1000)
-custard_cream_bun.sell()
-custard_cream_bun.sell()
+user_input_1 = input("메뉴를 선택하세요")
 
-print("누적 판매는" , custard_cream_bun.total , "입니다")
-
+user_input_2 = input("수량을 입력하세요")
+order = Beverage(user_input_1, user_input_2)
+order.calculate()
+print(order.total)
